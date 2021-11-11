@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Column Container"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columncontrol
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Column Control Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <flexcontainer
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Enable Flex Container?"
+                                                name="./flexContainer"
+                                                text="Enable Flex Container"
+                                                value="true"/>
+                                            <iscarousel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Enable Carousel?"
+                                                name="./iscarousel"
+                                                text="Is Carousel"
+                                                value="true"/>
+                                            <navigationlinks
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/restwithaem/components/content/multifield"
+                                                fieldDescription="Click 'Add field' to Add Column"
+                                                fieldLabel="Column Layout">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./columnLayout">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <columnclass
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Configure Column Class"
+                                                            fieldLabel="Column Class"
+                                                            name="./columnClass"/>
+                                                        <alignment
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            fieldDescription="Select Alignment Type"
+                                                            fieldLabel="Alignment"
+                                                            name="./alignment">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <none
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="None"
+                                                                    value=""/>
+                                                                <right
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Align Right"
+                                                                    value="pull-right"/>
+                                                                <left
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Align Left"
+                                                                    value="pull-left"/>
+                                                            </items>
+                                                        </alignment>
+                                                        <newwindow
+                                                            granite:class="column-width-validation"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            fieldDescription="Desktop Column Width"
+                                                            fieldLabel="Desktop Column Width"
+                                                            name="./columnWidth">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <hundred
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="100%(12 of 12 col)"
+                                                                    value="12"/>
+                                                                <ninty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="91%(11 of 12 col)"
+                                                                    value="11"/>
+                                                                <eighty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="83%(10 of 12 col)"
+                                                                    value="10"/>
+                                                                <seventyFive
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="75%(9 of 12 col)"
+                                                                    value="9"/>
+                                                                <sixtySix
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="66%(8 of 12 col)"
+                                                                    value="8"/>
+                                                                <fiftyeight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="58%(7 of 12 col)"
+                                                                    value="7"/>
+                                                                <fifty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="50%(6 of 12 col)"
+                                                                    value="6"/>
+                                                                <fourtyone
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="41%(5 of 12 col)"
+                                                                    value="5"/>
+                                                                <thirtyThree
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="33%(4 of 12 col)"
+                                                                    value="4"/>
+                                                                <twentyFive
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="25%(3 of 12 col)"
+                                                                    value="3"/>
+                                                                <sixteen
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="16%(2 of 12 col)"
+                                                                    value="2"/>
+                                                                <eight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="8%(1 of 12 col)"
+                                                                    value="1"/>
+                                                            </items>
+                                                        </newwindow>
+                                                        <hideintablet
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            deleteHint="{Boolean}false"
+                                                            fieldDescription="Tablet Column Width"
+                                                            fieldLabel="Tablet Column Width"
+                                                            name="./hideInTablet">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <hundred
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="100%(12 of 12 col)"
+                                                                    value="12"/>
+                                                                <ninty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="91%(11 of 12 col)"
+                                                                    value="11"/>
+                                                                <eighty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="83%(10 of 12 col)"
+                                                                    value="10"/>
+                                                                <seventyFive
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="75%(9 of 12 col)"
+                                                                    value="9"/>
+                                                                <sixtySix
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="66%(8 of 12 col)"
+                                                                    value="8"/>
+                                                                <fiftyeight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="58%(7 of 12 col)"
+                                                                    value="7"/>
+                                                                <fifty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="50%(6 of 12 col)"
+                                                                    value="6"/>
+                                                                <fourtyone
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="41%(5 of 12 col)"
+                                                                    value="5"/>
+                                                                <thirtyThree
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="33%(4 of 12 col)"
+                                                                    value="4"/>
+                                                                <twentyFive
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="25%(3 of 12 col)"
+                                                                    value="3"/>
+                                                                <sixteen
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="16%(2 of 12 col)"
+                                                                    value="2"/>
+                                                                <eight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="8%(1 of 12 col)"
+                                                                    value="1"/>
+                                                            </items>
+                                                        </hideintablet>
+                                                        <hideinmobile
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            deleteHint="{Boolean}false"
+                                                            fieldDescription="Mobile Column Width"
+                                                            fieldLabel="Mobile Column Width"
+                                                            name="./hideInMobile">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <hundred
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="100%(12 of 12 col)"
+                                                                    value="12"/>
+                                                                <ninty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="91%(11 of 12 col)"
+                                                                    value="11"/>
+                                                                <eighty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="83%(10 of 12 col)"
+                                                                    value="10"/>
+                                                                <seventyFive
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="75%(9 of 12 col)"
+                                                                    value="9"/>
+                                                                <sixtySix
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="66%(8 of 12 col)"
+                                                                    value="8"/>
+                                                                <fiftyeight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="58%(7 of 12 col)"
+                                                                    value="7"/>
+                                                                <fifty
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="50%(6 of 12 col)"
+                                                                    value="6"/>
+                                                                <fourtyone
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="41%(5 of 12 col)"
+                                                                    value="5"/>
+                                                                <thirtyThree
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="33%(4 of 12 col)"
+                                                                    value="4"/>
+                                                                <twentyFive
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="25%(3 of 12 col)"
+                                                                    value="3"/>
+                                                                <sixteen
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="16%(2 of 12 col)"
+                                                                    value="2"/>
+                                                                <eight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="8%(1 of 12 col)"
+                                                                    value="1"/>
+                                                            </items>
+                                                        </hideinmobile>
+                                                    </items>
+                                                </field>
+                                            </navigationlinks>
+                                        </items>
+                                    </field>
+                                </items>
+                            </column>
+                        </items>
+                    </columncontrol>
+                    <background
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Background Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <backgroundimage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                fieldDescription="Select the Background Color"
+                                                fieldLabel="Full Width Background Color"
+                                                multiple="{Boolean}true"
+                                                name="./backgroundcolor"/>
+                                            <containerbackgroundimage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                fieldDescription="Select the Container Background Color"
+                                                fieldLabel="Container Background Color"
+                                                multiple="{Boolean}true"
+                                                name="./containerbackgroundcolor"/>
+                                        </items>
+                                    </field>
+                                </items>
+                            </column>
+                        </items>
+                    </background>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

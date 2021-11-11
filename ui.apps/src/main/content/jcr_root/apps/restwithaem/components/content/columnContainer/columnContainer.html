@@ -1,0 +1,27 @@
+<h4 data-sly-test.mode="${wcmmode.edit || wcmmode.design}" class="authoringmode">Configure Column Container Component</h4>
+<sly data-sly-use.object="com.rest.aem.core.models.ColumnControlModel"></sly>
+<div class="${object.backgroundclass}"  data-sly-unwrap="${!properties.backgroundcolor}">
+	<div class="container ${object.containerbackgroundclass}">
+		<div class="row">
+			<div class="${properties.flexContainer ? 'flexContainer' : ''}" data-sly-unwrap="${!properties.flexContainer}">
+				<sly data-sly-test.iscarousel="${!properties.iscarousel}">
+					<sly data-sly-include="columnParsys.html"></sly>
+				</sly>
+				<sly data-sly-test.carouselId="${object.carouselId}"/>
+				<div id="${carouselId}" class="carousel slide" data-ride="carousel" data-interval="false" data-sly-test="${!iscarousel}">
+					<div class="carousel-inner">
+						<sly data-sly-include="columnParsys.html"></sly>
+					</div>
+					<div class="visible-sm visible-xs">
+						<a class="left carousel-control" href="#${carouselId}" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="right carousel-control" href="#${carouselId}" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
